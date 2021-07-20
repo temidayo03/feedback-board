@@ -2,9 +2,9 @@ import React from 'react';
 
 const tags = ['All', 'UI', 'UX', 'Enlargement', 'Bug', 'Feature']
 const roadmaps = [
-    { type: 'Planned', count: 2 },
-    { type: 'In-Progress', count: 3 },
-    { type: 'Live', count: 1 },
+    { type: 'Planned', count: 2, class: "bg-orange" },
+    { type: 'In-Progress', count: 3, class: "bg-purple" },
+    { type: 'Live', count: 1, class: "bg-green" },
 ]
 
 function Consult() {
@@ -25,7 +25,7 @@ function Consult() {
                 </tr>
                 {roadmaps.map(roadmap => 
                     <tr>
-                        <td><span class="icon-dot bg-orange"></span>{roadmap.type}</td>
+                        <td><span class={`icon-dot ${roadmap.class}`}></span>{roadmap.type}</td>
                         <td>{roadmap.count}</td>
                     </tr>
                 )}
